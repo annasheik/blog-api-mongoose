@@ -4,17 +4,28 @@
   "description": "blog api",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --exit",
+    "test": "mocha",
     "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai-http": "^4.0.0",
     "express": "^4.16.3",
     "morgan": "^1.9.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "mocha": "^5.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annasheik/blog-api.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/annasheik/blog-api/issues"
+  },
+  "homepage": "https://github.com/annasheik/blog-api#readme"
 }

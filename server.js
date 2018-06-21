@@ -12,11 +12,12 @@ let server;
 function runServer() {
 	const port = process.env.PORT || 8080;
 	return new Promise((resolve, reject) => {
-		server = app.listen(port, () => {
+		server = app
+		.listen(port, () => {
 			console.log(`Your app is listening on port ${port}`);
 			resolve(server);
-		});
-		.on('error', err => {
+		})
+		.on("error", err => {
 			reject(err);
 		});
 	});
