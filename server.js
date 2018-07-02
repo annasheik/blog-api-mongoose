@@ -7,7 +7,7 @@ mongoose.Promise = global.Promise;
 const app = express();
 const blogPostsRouter = require('./blogPostsRouter');
 const {DATABASE_URL, PORT} = require('./config');
-const {blogPost} = require('./models')
+const {BlogPost} = require('./models')
 //log the HTTP requests
 app.use(morgan('common'));
 app.use(express.json());
