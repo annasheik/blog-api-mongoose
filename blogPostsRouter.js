@@ -71,17 +71,17 @@ router.put('/:id', (req, res) => {
 	const updatableFields = ['title', 'content', 'author'];
 
 	updatableFields.forEach(field => {
-		if (filed in req.body) {
+		if (field in req.body) {
 			toUpdate[field] = req.body[field];
 		}
 	});
 
-	BlogPost.findByIdAndUpdate(req.params.id, {$set: toUpdate})
-	.then(post => res.status(200).json(post.serialize()))
+	BlogPost.findByIdAndUpdate(req.params.id, {$set: toUpdate}, { new: true })
+	.then(post => res.status(204).end())
 	.catch(err => {
 		console.error(err);
 		res.status(500).json({message: "Internal server error"})
-	})
+	});
 
 });
 
